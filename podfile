@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'Bahvan' do
+  pod 'XMPPFramework', :git => "https://github.com/robbiehanson/XMPPFramework.git", :branch => 'master'
+end

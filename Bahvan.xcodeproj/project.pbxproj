@@ -1,0 +1,1020 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22578F1726501364005256FF /* EcommerceBubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22578F1626501363005256FF /* EcommerceBubbleCell.m */; };
+		225D3EF126EDAB5C0060B03B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */; };
+		225D3EF226EDAB5C0060B03B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */; };
+		225D3EF326EDAB5C0060B03B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */; };
+		225D3EF426EDAB5C0060B03B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */; };
+		225D3EF626EDAB820060B03B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF526EDAB820060B03B /* Product.swift */; };
+		225D3EF726EDAB820060B03B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF526EDAB820060B03B /* Product.swift */; };
+		225D3EF826EDAB820060B03B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF526EDAB820060B03B /* Product.swift */; };
+		225D3EFA26EDAB950060B03B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF926EDAB950060B03B /* ProductCell.swift */; };
+		225D3EFB26EDAB950060B03B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF926EDAB950060B03B /* ProductCell.swift */; };
+		225D3EFC26EDAB950060B03B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF926EDAB950060B03B /* ProductCell.swift */; };
+		22607252261DC30400560ED5 /* ACKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2260724B261DC30300560ED5 /* ACKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		531DABDF23CD8C1A0027646F /* FriendsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 531DABDE23CD8C1A0027646F /* FriendsDelegate.m */; };
+		53A9D7E8242D708100C4A249 /* User2.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A9D7E7242D708000C4A249 /* User2.m */; };
+		7AB75122BE31B0CCF00CC1F9 /* Pods_Bahvan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B93D3B6BB1D83DACBA0E1C /* Pods_Bahvan.framework */; };
+		F107DB901DFF3ADE00649FD9 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DB8F1DFF3ADE00649FD9 /* ChatViewController.m */; };
+		F107DB911DFF3ADE00649FD9 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DB8F1DFF3ADE00649FD9 /* ChatViewController.m */; };
+		F107DB921DFF3ADE00649FD9 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DB8F1DFF3ADE00649FD9 /* ChatViewController.m */; };
+		F107DB9F1DFF4A3600649FD9 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DB9E1DFF4A3600649FD9 /* Chat.m */; };
+		F107DBA01DFF4A3600649FD9 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DB9E1DFF4A3600649FD9 /* Chat.m */; };
+		F107DBA11DFF4A3600649FD9 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DB9E1DFF4A3600649FD9 /* Chat.m */; };
+		F107DBA41DFF513600649FD9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DBA31DFF513600649FD9 /* User.m */; };
+		F107DBA51DFF513600649FD9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DBA31DFF513600649FD9 /* User.m */; };
+		F107DBA61DFF513600649FD9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F107DBA31DFF513600649FD9 /* User.m */; };
+		F10D5D371E036D8400927C0D /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = F10D5D361E036D8400927C0D /* Account.m */; };
+		F11403651EA6E6AE00CF4B4C /* JabberClientAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F11403641EA6E6AE00CF4B4C /* JabberClientAppDelegate.m */; };
+		F160A0DB1E00C6770035108E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F160A0DA1E00C6770035108E /* Message.m */; };
+		F160A0DC1E00C6770035108E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F160A0DA1E00C6770035108E /* Message.m */; };
+		F160A0DD1E00C6770035108E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F160A0DA1E00C6770035108E /* Message.m */; };
+		F17DAD701DF35D6100A433F1 /* FriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DAD6F1DF35D5F00A433F1 /* FriendsController.m */; };
+		F17DAD751DF4B73E00A433F1 /* FindFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DAD741DF4B73E00A433F1 /* FindFriends.m */; };
+		F17DAD761DF4B73F00A433F1 /* FindFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DAD741DF4B73E00A433F1 /* FindFriends.m */; };
+		F17DAD771DF4B73F00A433F1 /* FindFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DAD741DF4B73E00A433F1 /* FindFriends.m */; };
+		F18345101DEE6B1F00A5EA22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F183450F1DEE6B1F00A5EA22 /* main.m */; };
+		F18345131DEE6B2000A5EA22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F18345121DEE6B2000A5EA22 /* AppDelegate.m */; };
+		F183451C1DEE6B2000A5EA22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F183451A1DEE6B2000A5EA22 /* Main.storyboard */; };
+		F183451E1DEE6B2100A5EA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F183451D1DEE6B2100A5EA22 /* Assets.xcassets */; };
+		F18345211DEE6B2100A5EA22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F183451F1DEE6B2100A5EA22 /* LaunchScreen.storyboard */; };
+		F183452C1DEE6B2300A5EA22 /* BahvanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F183452B1DEE6B2300A5EA22 /* BahvanTests.m */; };
+		F18345371DEE6B2300A5EA22 /* BahvanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F18345361DEE6B2300A5EA22 /* BahvanUITests.m */; };
+		F1B1DA4E1E10345400E8E7A3 /* MessageSentDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B1DA4D1E10345300E8E7A3 /* MessageSentDateTableViewCell.m */; };
+		F1B1DA4F1E10345500E8E7A3 /* MessageSentDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B1DA4D1E10345300E8E7A3 /* MessageSentDateTableViewCell.m */; };
+		F1B1DA501E10345500E8E7A3 /* MessageSentDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B1DA4D1E10345300E8E7A3 /* MessageSentDateTableViewCell.m */; };
+		F1E34EA31E09D6A200277068 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EA21E09D6A100277068 /* ChatTableViewCell.m */; };
+		F1E34EA41E09D6A200277068 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EA21E09D6A100277068 /* ChatTableViewCell.m */; };
+		F1E34EA51E09D6A200277068 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EA21E09D6A100277068 /* ChatTableViewCell.m */; };
+		F1E34EA81E09DB6900277068 /* UserPictureImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EA71E09DB6900277068 /* UserPictureImageView.m */; };
+		F1E34EA91E09DB6900277068 /* UserPictureImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EA71E09DB6900277068 /* UserPictureImageView.m */; };
+		F1E34EAA1E09DB6900277068 /* UserPictureImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EA71E09DB6900277068 /* UserPictureImageView.m */; };
+		F1E34EAD1E0B1F4A00277068 /* MessageBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EAC1E0B1F4800277068 /* MessageBubbleTableViewCell.m */; };
+		F1E34EAE1E0B1F4B00277068 /* MessageBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EAC1E0B1F4800277068 /* MessageBubbleTableViewCell.m */; };
+		F1E34EAF1E0B1F4B00277068 /* MessageBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EAC1E0B1F4800277068 /* MessageBubbleTableViewCell.m */; };
+		F1E34EB21E0B8D4300277068 /* UIImage+ImageWithRed.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EB11E0B8D4200277068 /* UIImage+ImageWithRed.m */; };
+		F1E34EB31E0B8D4300277068 /* UIImage+ImageWithRed.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EB11E0B8D4200277068 /* UIImage+ImageWithRed.m */; };
+		F1E34EB41E0B8D4300277068 /* UIImage+ImageWithRed.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E34EB11E0B8D4200277068 /* UIImage+ImageWithRed.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22607250261DC30400560ED5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F18345031DEE6B1E00A5EA22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2260724A261DC30300560ED5;
+			remoteInfo = ACKeyboard;
+		};
+		F18345281DEE6B2300A5EA22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F18345031DEE6B1E00A5EA22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F183450A1DEE6B1E00A5EA22;
+			remoteInfo = Bahvan;
+		};
+		F18345331DEE6B2300A5EA22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F18345031DEE6B1E00A5EA22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F183450A1DEE6B1E00A5EA22;
+			remoteInfo = Bahvan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		22607242261DC26900560ED5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				22607252261DC30400560ED5 /* ACKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		10B2A852CBD5DC70D7A56100 /* Pods-Bahvan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bahvan.release.xcconfig"; path = "Target Support Files/Pods-Bahvan/Pods-Bahvan.release.xcconfig"; sourceTree = "<group>"; };
+		22578F1626501363005256FF /* EcommerceBubbleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcommerceBubbleCell.m; sourceTree = "<group>"; };
+		22578F1826501384005256FF /* EcommerceBubbleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcommerceBubbleCell.h; sourceTree = "<group>"; };
+		225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		225D3EF526EDAB820060B03B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		225D3EF926EDAB950060B03B /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		2260724B261DC30300560ED5 /* ACKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ACKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2260724F261DC30400560ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		531DABDE23CD8C1A0027646F /* FriendsDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsDelegate.m; sourceTree = "<group>"; };
+		53367B7722A5FBFF00AB3674 /* FriendsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsDelegate.h; sourceTree = "<group>"; };
+		53A9D7E6242D654300C4A249 /* User2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User2.h; sourceTree = "<group>"; };
+		53A9D7E7242D708000C4A249 /* User2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User2.m; sourceTree = "<group>"; };
+		85B93D3B6BB1D83DACBA0E1C /* Pods_Bahvan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bahvan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B12184E44340E6F96127C1 /* Pods-Bahvan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bahvan.debug.xcconfig"; path = "Target Support Files/Pods-Bahvan/Pods-Bahvan.debug.xcconfig"; sourceTree = "<group>"; };
+		F107DB8E1DFF3ADD00649FD9 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		F107DB8F1DFF3ADE00649FD9 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		F107DB9D1DFF4A3600649FD9 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
+		F107DB9E1DFF4A3600649FD9 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
+		F107DBA21DFF513600649FD9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F107DBA31DFF513600649FD9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F10D5D351E036D8400927C0D /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		F10D5D361E036D8400927C0D /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		F11403641EA6E6AE00CF4B4C /* JabberClientAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JabberClientAppDelegate.m; sourceTree = "<group>"; };
+		F11403661EA6E8A900CF4B4C /* JabberClientAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JabberClientAppDelegate.h; path = ../JabberClientAppDelegate.h; sourceTree = "<group>"; };
+		F11403671EA70ACE00CF4B4C /* ChatDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDelegate.h; sourceTree = "<group>"; };
+		F11403681EA70B4400CF4B4C /* MessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDelegate.h; sourceTree = "<group>"; };
+		F160A0D91E00C6770035108E /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		F160A0DA1E00C6770035108E /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		F17DAD6E1DF35D5E00A433F1 /* FriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsController.h; sourceTree = "<group>"; };
+		F17DAD6F1DF35D5F00A433F1 /* FriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsController.m; sourceTree = "<group>"; };
+		F17DAD731DF4B73E00A433F1 /* FindFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindFriends.h; sourceTree = "<group>"; };
+		F17DAD741DF4B73E00A433F1 /* FindFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindFriends.m; sourceTree = "<group>"; };
+		F183450B1DEE6B1E00A5EA22 /* Bahvan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bahvan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F183450F1DEE6B1F00A5EA22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F18345111DEE6B2000A5EA22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F18345121DEE6B2000A5EA22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F183451B1DEE6B2000A5EA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F183451D1DEE6B2100A5EA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F18345201DEE6B2100A5EA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F18345221DEE6B2100A5EA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F18345271DEE6B2200A5EA22 /* BahvanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BahvanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F183452B1DEE6B2300A5EA22 /* BahvanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BahvanTests.m; sourceTree = "<group>"; };
+		F183452D1DEE6B2300A5EA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F18345321DEE6B2300A5EA22 /* BahvanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BahvanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F18345361DEE6B2300A5EA22 /* BahvanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BahvanUITests.m; sourceTree = "<group>"; };
+		F18345381DEE6B2300A5EA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1B1DA4C1E10345300E8E7A3 /* MessageSentDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSentDateTableViewCell.h; sourceTree = "<group>"; };
+		F1B1DA4D1E10345300E8E7A3 /* MessageSentDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSentDateTableViewCell.m; sourceTree = "<group>"; };
+		F1E34EA11E09D6A100277068 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
+		F1E34EA21E09D6A100277068 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
+		F1E34EA61E09DB6900277068 /* UserPictureImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPictureImageView.h; sourceTree = "<group>"; };
+		F1E34EA71E09DB6900277068 /* UserPictureImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPictureImageView.m; sourceTree = "<group>"; };
+		F1E34EAB1E0B1F4700277068 /* MessageBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBubbleTableViewCell.h; sourceTree = "<group>"; };
+		F1E34EAC1E0B1F4800277068 /* MessageBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBubbleTableViewCell.m; sourceTree = "<group>"; };
+		F1E34EB01E0B8D4200277068 /* UIImage+ImageWithRed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithRed.h"; sourceTree = "<group>"; };
+		F1E34EB11E0B8D4200277068 /* UIImage+ImageWithRed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithRed.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22607248261DC30300560ED5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18345081DEE6B1E00A5EA22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB75122BE31B0CCF00CC1F9 /* Pods_Bahvan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18345241DEE6B2200A5EA22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F183452F1DEE6B2300A5EA22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2260724C261DC30300560ED5 /* ACKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */,
+				2260724F261DC30400560ED5 /* Info.plist */,
+			);
+			path = ACKeyboard;
+			sourceTree = "<group>";
+		};
+		40DCBB9ECC28FD6991E3E919 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85B93D3B6BB1D83DACBA0E1C /* Pods_Bahvan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF2C1D6D9CC1C175E078DC85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1B12184E44340E6F96127C1 /* Pods-Bahvan.debug.xcconfig */,
+				10B2A852CBD5DC70D7A56100 /* Pods-Bahvan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F107DB931DFF452A00649FD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F107DB9D1DFF4A3600649FD9 /* Chat.h */,
+				F107DB9E1DFF4A3600649FD9 /* Chat.m */,
+				F107DBA21DFF513600649FD9 /* User.h */,
+				F107DBA31DFF513600649FD9 /* User.m */,
+				F160A0DA1E00C6770035108E /* Message.m */,
+				F160A0D91E00C6770035108E /* Message.h */,
+				53A9D7E6242D654300C4A249 /* User2.h */,
+				53A9D7E7242D708000C4A249 /* User2.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F18345021DEE6B1E00A5EA22 = {
+			isa = PBXGroup;
+			children = (
+				F183450D1DEE6B1F00A5EA22 /* Bahvan */,
+				F183452A1DEE6B2300A5EA22 /* BahvanTests */,
+				F18345351DEE6B2300A5EA22 /* BahvanUITests */,
+				2260724C261DC30300560ED5 /* ACKeyboard */,
+				F183450C1DEE6B1E00A5EA22 /* Products */,
+				40DCBB9ECC28FD6991E3E919 /* Frameworks */,
+				CF2C1D6D9CC1C175E078DC85 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		F183450C1DEE6B1E00A5EA22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F183450B1DEE6B1E00A5EA22 /* Bahvan.app */,
+				F18345271DEE6B2200A5EA22 /* BahvanTests.xctest */,
+				F18345321DEE6B2300A5EA22 /* BahvanUITests.xctest */,
+				2260724B261DC30300560ED5 /* ACKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F183450D1DEE6B1F00A5EA22 /* Bahvan */ = {
+			isa = PBXGroup;
+			children = (
+				225D3EF926EDAB950060B03B /* ProductCell.swift */,
+				225D3EF526EDAB820060B03B /* Product.swift */,
+				F10D5D351E036D8400927C0D /* Account.h */,
+				F10D5D361E036D8400927C0D /* Account.m */,
+				F107DB931DFF452A00649FD9 /* Models */,
+				F18345111DEE6B2000A5EA22 /* AppDelegate.h */,
+				F18345121DEE6B2000A5EA22 /* AppDelegate.m */,
+				53367B7722A5FBFF00AB3674 /* FriendsDelegate.h */,
+				531DABDE23CD8C1A0027646F /* FriendsDelegate.m */,
+				F183451A1DEE6B2000A5EA22 /* Main.storyboard */,
+				F183451D1DEE6B2100A5EA22 /* Assets.xcassets */,
+				F183451F1DEE6B2100A5EA22 /* LaunchScreen.storyboard */,
+				F18345221DEE6B2100A5EA22 /* Info.plist */,
+				F183450E1DEE6B1F00A5EA22 /* Supporting Files */,
+				F17DAD6E1DF35D5E00A433F1 /* FriendsController.h */,
+				F17DAD6F1DF35D5F00A433F1 /* FriendsController.m */,
+				F1E34EA21E09D6A100277068 /* ChatTableViewCell.m */,
+				F17DAD731DF4B73E00A433F1 /* FindFriends.h */,
+				F17DAD741DF4B73E00A433F1 /* FindFriends.m */,
+				F107DB8E1DFF3ADD00649FD9 /* ChatViewController.h */,
+				F107DB8F1DFF3ADE00649FD9 /* ChatViewController.m */,
+				F1E34EA11E09D6A100277068 /* ChatTableViewCell.h */,
+				F1E34EA61E09DB6900277068 /* UserPictureImageView.h */,
+				F1E34EA71E09DB6900277068 /* UserPictureImageView.m */,
+				F1E34EAB1E0B1F4700277068 /* MessageBubbleTableViewCell.h */,
+				F1E34EAC1E0B1F4800277068 /* MessageBubbleTableViewCell.m */,
+				F1E34EB01E0B8D4200277068 /* UIImage+ImageWithRed.h */,
+				F1E34EB11E0B8D4200277068 /* UIImage+ImageWithRed.m */,
+				F1B1DA4C1E10345300E8E7A3 /* MessageSentDateTableViewCell.h */,
+				F1B1DA4D1E10345300E8E7A3 /* MessageSentDateTableViewCell.m */,
+				F11403661EA6E8A900CF4B4C /* JabberClientAppDelegate.h */,
+				F11403641EA6E6AE00CF4B4C /* JabberClientAppDelegate.m */,
+				F11403671EA70ACE00CF4B4C /* ChatDelegate.h */,
+				F11403681EA70B4400CF4B4C /* MessageDelegate.h */,
+				22578F1826501384005256FF /* EcommerceBubbleCell.h */,
+				22578F1626501363005256FF /* EcommerceBubbleCell.m */,
+			);
+			path = Bahvan;
+			sourceTree = "<group>";
+		};
+		F183450E1DEE6B1F00A5EA22 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F183450F1DEE6B1F00A5EA22 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F183452A1DEE6B2300A5EA22 /* BahvanTests */ = {
+			isa = PBXGroup;
+			children = (
+				F183452B1DEE6B2300A5EA22 /* BahvanTests.m */,
+				F183452D1DEE6B2300A5EA22 /* Info.plist */,
+			);
+			path = BahvanTests;
+			sourceTree = "<group>";
+		};
+		F18345351DEE6B2300A5EA22 /* BahvanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F18345361DEE6B2300A5EA22 /* BahvanUITests.m */,
+				F18345381DEE6B2300A5EA22 /* Info.plist */,
+			);
+			path = BahvanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2260724A261DC30300560ED5 /* ACKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22607253261DC30400560ED5 /* Build configuration list for PBXNativeTarget "ACKeyboard" */;
+			buildPhases = (
+				22607247261DC30300560ED5 /* Sources */,
+				22607248261DC30300560ED5 /* Frameworks */,
+				22607249261DC30300560ED5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACKeyboard;
+			productName = ACKeyboard;
+			productReference = 2260724B261DC30300560ED5 /* ACKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F183450A1DEE6B1E00A5EA22 /* Bahvan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F183453B1DEE6B2300A5EA22 /* Build configuration list for PBXNativeTarget "Bahvan" */;
+			buildPhases = (
+				D2EC3F035BC3BF378BE59691 /* [CP] Check Pods Manifest.lock */,
+				F18345071DEE6B1E00A5EA22 /* Sources */,
+				F18345081DEE6B1E00A5EA22 /* Frameworks */,
+				F18345091DEE6B1E00A5EA22 /* Resources */,
+				2191CD9F5A1C6F5A1C05E641 /* [CP] Embed Pods Frameworks */,
+				22607242261DC26900560ED5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22607251261DC30400560ED5 /* PBXTargetDependency */,
+			);
+			name = Bahvan;
+			productName = Bahvan;
+			productReference = F183450B1DEE6B1E00A5EA22 /* Bahvan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F18345261DEE6B2200A5EA22 /* BahvanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F183453E1DEE6B2300A5EA22 /* Build configuration list for PBXNativeTarget "BahvanTests" */;
+			buildPhases = (
+				F18345231DEE6B2200A5EA22 /* Sources */,
+				F18345241DEE6B2200A5EA22 /* Frameworks */,
+				F18345251DEE6B2200A5EA22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F18345291DEE6B2300A5EA22 /* PBXTargetDependency */,
+			);
+			name = BahvanTests;
+			productName = BahvanTests;
+			productReference = F18345271DEE6B2200A5EA22 /* BahvanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F18345311DEE6B2300A5EA22 /* BahvanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F18345411DEE6B2300A5EA22 /* Build configuration list for PBXNativeTarget "BahvanUITests" */;
+			buildPhases = (
+				F183452E1DEE6B2300A5EA22 /* Sources */,
+				F183452F1DEE6B2300A5EA22 /* Frameworks */,
+				F18345301DEE6B2300A5EA22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F18345341DEE6B2300A5EA22 /* PBXTargetDependency */,
+			);
+			name = BahvanUITests;
+			productName = BahvanUITests;
+			productReference = F18345321DEE6B2300A5EA22 /* BahvanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F18345031DEE6B1E00A5EA22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Bahvan;
+				TargetAttributes = {
+					2260724A261DC30300560ED5 = {
+						CreatedOnToolsVersion = 12.3;
+						DevelopmentTeam = TZDF6FGCZA;
+						ProvisioningStyle = Automatic;
+					};
+					F183450A1DEE6B1E00A5EA22 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = TZDF6FGCZA;
+						LastSwiftMigration = 1230;
+					};
+					F18345261DEE6B2200A5EA22 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 1250;
+						TestTargetID = F183450A1DEE6B1E00A5EA22;
+					};
+					F18345311DEE6B2300A5EA22 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 1250;
+						TestTargetID = F183450A1DEE6B1E00A5EA22;
+					};
+				};
+			};
+			buildConfigurationList = F18345061DEE6B1E00A5EA22 /* Build configuration list for PBXProject "Bahvan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = F18345021DEE6B1E00A5EA22;
+			productRefGroup = F183450C1DEE6B1E00A5EA22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F183450A1DEE6B1E00A5EA22 /* Bahvan */,
+				F18345261DEE6B2200A5EA22 /* BahvanTests */,
+				F18345311DEE6B2300A5EA22 /* BahvanUITests */,
+				2260724A261DC30300560ED5 /* ACKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22607249261DC30300560ED5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18345091DEE6B1E00A5EA22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18345211DEE6B2100A5EA22 /* LaunchScreen.storyboard in Resources */,
+				F183451E1DEE6B2100A5EA22 /* Assets.xcassets in Resources */,
+				F183451C1DEE6B2000A5EA22 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18345251DEE6B2200A5EA22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18345301DEE6B2300A5EA22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2191CD9F5A1C6F5A1C05E641 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bahvan/Pods-Bahvan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/KissXML/KissXML.framework",
+				"${BUILT_PRODUCTS_DIR}/XMPPFramework/XMPPFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/libidn/libidn.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KissXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMPPFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libidn.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bahvan/Pods-Bahvan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2EC3F035BC3BF378BE59691 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bahvan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22607247261DC30300560ED5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225D3EF426EDAB5C0060B03B /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18345071DEE6B1E00A5EA22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22578F1726501364005256FF /* EcommerceBubbleCell.m in Sources */,
+				F107DBA41DFF513600649FD9 /* User.m in Sources */,
+				F1E34EA31E09D6A200277068 /* ChatTableViewCell.m in Sources */,
+				531DABDF23CD8C1A0027646F /* FriendsDelegate.m in Sources */,
+				F18345131DEE6B2000A5EA22 /* AppDelegate.m in Sources */,
+				F18345101DEE6B1F00A5EA22 /* main.m in Sources */,
+				F1E34EAD1E0B1F4A00277068 /* MessageBubbleTableViewCell.m in Sources */,
+				F1E34EB21E0B8D4300277068 /* UIImage+ImageWithRed.m in Sources */,
+				F17DAD701DF35D6100A433F1 /* FriendsController.m in Sources */,
+				F107DB9F1DFF4A3600649FD9 /* Chat.m in Sources */,
+				225D3EF126EDAB5C0060B03B /* KeyboardViewController.swift in Sources */,
+				F1B1DA4E1E10345400E8E7A3 /* MessageSentDateTableViewCell.m in Sources */,
+				225D3EFA26EDAB950060B03B /* ProductCell.swift in Sources */,
+				F11403651EA6E6AE00CF4B4C /* JabberClientAppDelegate.m in Sources */,
+				F1E34EA81E09DB6900277068 /* UserPictureImageView.m in Sources */,
+				F107DB901DFF3ADE00649FD9 /* ChatViewController.m in Sources */,
+				53A9D7E8242D708100C4A249 /* User2.m in Sources */,
+				F10D5D371E036D8400927C0D /* Account.m in Sources */,
+				225D3EF626EDAB820060B03B /* Product.swift in Sources */,
+				F160A0DB1E00C6770035108E /* Message.m in Sources */,
+				F17DAD751DF4B73E00A433F1 /* FindFriends.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18345231DEE6B2200A5EA22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F107DBA51DFF513600649FD9 /* User.m in Sources */,
+				F160A0DC1E00C6770035108E /* Message.m in Sources */,
+				F1E34EA91E09DB6900277068 /* UserPictureImageView.m in Sources */,
+				F17DAD761DF4B73F00A433F1 /* FindFriends.m in Sources */,
+				F1E34EA41E09D6A200277068 /* ChatTableViewCell.m in Sources */,
+				225D3EFB26EDAB950060B03B /* ProductCell.swift in Sources */,
+				F107DBA01DFF4A3600649FD9 /* Chat.m in Sources */,
+				F1E34EB31E0B8D4300277068 /* UIImage+ImageWithRed.m in Sources */,
+				225D3EF226EDAB5C0060B03B /* KeyboardViewController.swift in Sources */,
+				F183452C1DEE6B2300A5EA22 /* BahvanTests.m in Sources */,
+				F107DB911DFF3ADE00649FD9 /* ChatViewController.m in Sources */,
+				F1B1DA4F1E10345500E8E7A3 /* MessageSentDateTableViewCell.m in Sources */,
+				F1E34EAE1E0B1F4B00277068 /* MessageBubbleTableViewCell.m in Sources */,
+				225D3EF726EDAB820060B03B /* Product.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F183452E1DEE6B2300A5EA22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F107DBA61DFF513600649FD9 /* User.m in Sources */,
+				F160A0DD1E00C6770035108E /* Message.m in Sources */,
+				F1E34EAA1E09DB6900277068 /* UserPictureImageView.m in Sources */,
+				F17DAD771DF4B73F00A433F1 /* FindFriends.m in Sources */,
+				F1E34EA51E09D6A200277068 /* ChatTableViewCell.m in Sources */,
+				225D3EFC26EDAB950060B03B /* ProductCell.swift in Sources */,
+				F107DBA11DFF4A3600649FD9 /* Chat.m in Sources */,
+				F1E34EB41E0B8D4300277068 /* UIImage+ImageWithRed.m in Sources */,
+				225D3EF326EDAB5C0060B03B /* KeyboardViewController.swift in Sources */,
+				F18345371DEE6B2300A5EA22 /* BahvanUITests.m in Sources */,
+				F107DB921DFF3ADE00649FD9 /* ChatViewController.m in Sources */,
+				F1B1DA501E10345500E8E7A3 /* MessageSentDateTableViewCell.m in Sources */,
+				F1E34EAF1E0B1F4B00277068 /* MessageBubbleTableViewCell.m in Sources */,
+				225D3EF826EDAB820060B03B /* Product.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22607251261DC30400560ED5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2260724A261DC30300560ED5 /* ACKeyboard */;
+			targetProxy = 22607250261DC30400560ED5 /* PBXContainerItemProxy */;
+		};
+		F18345291DEE6B2300A5EA22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F183450A1DEE6B1E00A5EA22 /* Bahvan */;
+			targetProxy = F18345281DEE6B2300A5EA22 /* PBXContainerItemProxy */;
+		};
+		F18345341DEE6B2300A5EA22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F183450A1DEE6B1E00A5EA22 /* Bahvan */;
+			targetProxy = F18345331DEE6B2300A5EA22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F183451A1DEE6B2000A5EA22 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F183451B1DEE6B2000A5EA22 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F183451F1DEE6B2100A5EA22 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F18345201DEE6B2100A5EA22 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22607254261DC30400560ED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZDF6FGCZA;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ACKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = COM.BAHVAN.BAHVAN.ACKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/ACKeyboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22607255261DC30400560ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZDF6FGCZA;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ACKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = COM.BAHVAN.BAHVAN.ACKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/ACKeyboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F18345391DEE6B2300A5EA22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = Bahvan;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Bahvan-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F183453A1DEE6B2300A5EA22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = Bahvan;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Bahvan-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F183453C1DEE6B2300A5EA22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B12184E44340E6F96127C1 /* Pods-Bahvan.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TZDF6FGCZA;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleMaps/Subspecs/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Subspecs/Maps/Frameworks\"",
+					"~/Downloads/FacebookSDKs-iOS-4",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KissXML/KissXML.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/XMPPFramework/XMPPFramework.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/libidn/libidn.framework/Headers\"",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libresolv",
+				);
+				INFOPLIST_FILE = Bahvan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COM.BAHVAN.BAHVAN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/Bahvan-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER3 = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F183453D1DEE6B2300A5EA22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10B2A852CBD5DC70D7A56100 /* Pods-Bahvan.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TZDF6FGCZA;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleMaps/Subspecs/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Subspecs/Maps/Frameworks\"",
+					"~/Downloads/FacebookSDKs-iOS-4",
+				);
+				INFOPLIST_FILE = Bahvan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COM.BAHVAN.BAHVAN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/Bahvan-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER3 = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F183453F1DEE6B2300A5EA22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = BahvanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bahvan.BahvanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/BahvanTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bahvan.app/Bahvan";
+			};
+			name = Debug;
+		};
+		F18345401DEE6B2300A5EA22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = BahvanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bahvan.BahvanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/BahvanTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bahvan.app/Bahvan";
+			};
+			name = Release;
+		};
+		F18345421DEE6B2300A5EA22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = BahvanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bahvan.BahvanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/BahvanUITests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Bahvan;
+			};
+			name = Debug;
+		};
+		F18345431DEE6B2300A5EA22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = BahvanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bahvan.BahvanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bahvan/BahvanUITests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Bahvan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22607253261DC30400560ED5 /* Build configuration list for PBXNativeTarget "ACKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22607254261DC30400560ED5 /* Debug */,
+				22607255261DC30400560ED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F18345061DEE6B1E00A5EA22 /* Build configuration list for PBXProject "Bahvan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F18345391DEE6B2300A5EA22 /* Debug */,
+				F183453A1DEE6B2300A5EA22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F183453B1DEE6B2300A5EA22 /* Build configuration list for PBXNativeTarget "Bahvan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F183453C1DEE6B2300A5EA22 /* Debug */,
+				F183453D1DEE6B2300A5EA22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F183453E1DEE6B2300A5EA22 /* Build configuration list for PBXNativeTarget "BahvanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F183453F1DEE6B2300A5EA22 /* Debug */,
+				F18345401DEE6B2300A5EA22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F18345411DEE6B2300A5EA22 /* Build configuration list for PBXNativeTarget "BahvanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F18345421DEE6B2300A5EA22 /* Debug */,
+				F18345431DEE6B2300A5EA22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F18345031DEE6B1E00A5EA22 /* Project object */;
+}
