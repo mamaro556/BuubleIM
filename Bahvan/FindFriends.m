@@ -13,8 +13,17 @@
 NSArray *FriendsSmplx;
 NSArray *FriendsFiltered;
 
+- (id) init {
+    self = [super initWithNibName:nil bundle:nil];
+    return self;
+}
 - (void) viewDidLoad {
     [super viewDidLoad];
+ 
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel target:self action:@selector(dismissView:)];
+ 
+    self.navigationItem.leftBarButtonItem = item;
+
     self.searchBarSearchbtnpressed = NO;
     self.searchResultsController = [[UITableViewController alloc] init];
 //    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchResultsController];
@@ -114,6 +123,11 @@ NSArray *FriendsFiltered;
 
 }
 
+- (void) dismissView: (id) sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissModalViewControllerAnimated: YES];
+    
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (self.searchController.active && [self.searchController.searchBar.text length] != 0){
@@ -167,10 +181,12 @@ NSArray *FriendsFiltered;
 {
     
 }
+
 - (IBAction)cancelFindFriends:(UIBarButtonItem *)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 - (void)KeyboardDidShow:(NSNotification *) Not
 {

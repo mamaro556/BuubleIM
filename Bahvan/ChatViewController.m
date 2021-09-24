@@ -33,6 +33,14 @@ Product *products[1];  // array of Product
 
 @implementation ChatViewController  
 
+- (id) init {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        [self getMessageHistory];
+    }
+    return self;
+}
+
 +(CGFloat) GetChatMessageFontSize
 {
     return chatMessageFontSize;
@@ -109,6 +117,83 @@ Product *products[1];  // array of Product
     return self.Toolbar;
 }
 
+-(void) getMessageHistory {
+    [((AppDelegate *)[UIApplication sharedApplication].delegate).account.chats removeObjectAtIndex:1];
+    [((AppDelegate *)[UIApplication sharedApplication].delegate).account.chats insertObject: [[Chat alloc ]initWithUser:[[User2 alloc ]initWithJID:@"Angel"] lastMessageText:@"6 sounds good :-)"  lastMessageSentDate:[[NSDate date] dateByAddingTimeInterval:-5]] atIndex:1];
+    C = ((AppDelegate *)[UIApplication sharedApplication].delegate).account.chats[1];
+    //self.title =  C.User.JID;
+    self.title = [self appDelegate].UserMessaged;
+    self.hidesBottomBarWhenPushed = YES;
+
+    //This is Message history store in core data
+    
+    //  NSString *userJID = [NSString stringWithFormat:@"%@@%@", userName, self.hostName];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext  *context = [[self appDelegate].xmppMessageArchivingCoreDataStorage mainThreadManagedObjectContext];
+    NSEntityDescription *messageEntity = [NSEntityDescription  entityForName:@"XMPPMessageArchiving_Message_CoreDataObject" inManagedObjectContext:context];
+    
+    fetchRequest.entity = messageEntity;
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:NO];
+    fetchRequest.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSError *error = nil;
+    NSString *predicateFrmt = @"bareJidStr == %@";
+    NSString *userMessaged;
+    userMessaged = [self appDelegate].UserMessaged;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFrmt, userMessaged];
+    fetchRequest.predicate = predicate;
+    
+    NSArray *results = [context executeFetchRequest:fetchRequest error:&error];
+    
+    NSDateFormatter *dateFormatter = [Chat DateFormatter];
+    NSDate *date;
+    NSMutableArray *ArrMsg;
+    int intOutgoing;
+    bool boolOutgoing;
+    
+    
+    //      for (int i=0; i<[results count]; i++)
+    //       {
+    //           NSLog(@"Chat: %@",[[results[i] attributeForName:@"jid"]stringValue]);c\
+    //       }
+    NSLog(@"Chat: %@", [NSString stringWithFormat:@"%lu", (unsigned long)[results count]]);
+    //        [self print:[[NSMutableArray alloc] initWithArray:results]];
+    @autoreleasepool {
+        for(int i = (int)[results count] - 1; i > -1; i--)
+        {
+            XMPPMessageArchiving_Message_CoreDataObject *message = [results objectAtIndex:i];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            date = message.timestamp;
+            intOutgoing = [message.outgoing intValue];
+            if (intOutgoing == 0)
+            {
+                boolOutgoing = false;
+            }
+            else
+            {
+                boolOutgoing = true;
+            }
+            ArrMsg = [NSMutableArray arrayWithObjects:[[Message alloc] initWithIncoming:!boolOutgoing text:message.body sentdate:date], nil];
+//                [((Chat *)self.chats[1]).LoadedMessages addObject:ArrMsg];
+            [C.LoadedMessages addObject:ArrMsg];
+            NSLog(@"xmpp to: %@", message.message.toStr);
+            NSLog(@"xmpp from: %@", message.message.fromStr);
+            NSLog(@"xmpp stringvalue: %@", message.message.stringValue);
+            NSLog(@"xmpp XMLstring: %@", message.message.XMLString);
+            NSLog(@"messageStr param is %@", message.messageStr);
+            NSXMLElement *element = [[NSXMLElement alloc] initWithXMLString:message.messageStr error:nil];
+            NSLog(@"to param is %@",[element attributeStringValueForName:@"to"]);
+            NSLog(@"NSCore object id param is %@",message.objectID);
+            NSLog(@"bareJid param is %@",message.bareJid);
+            NSLog(@"bareJidStr param is %@",message.bareJidStr);
+            NSLog(@"body param is %@",message.body);
+            NSLog(@"timestamp param is %@",message.timestamp);
+            NSLog(@"outgoing param is %d",[message.outgoing intValue]);
+                
+        }
+    }
+}
+
+
 -(void) tapDetected{
     
     NSLog(@"tap detected on imageview");
@@ -141,15 +226,6 @@ Product *products[1];  // array of Product
 }
 
 
--(id) init{
-    self = [super init];
-    if (self)
-    {
-    }
-    return self;
-    
-}
-
 -(id) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self)
@@ -162,9 +238,7 @@ Product *products[1];  // array of Product
         self.title = [self appDelegate].UserMessaged;
         self.hidesBottomBarWhenPushed = YES;
     
-    //b
-
-        //This is Message history coming from core data
+        //This is Message history store in core data
         
         //  NSString *userJID = [NSString stringWithFormat:@"%@@%@", userName, self.hostName];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];

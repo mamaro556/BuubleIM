@@ -35,15 +35,38 @@
     // Add any custom logic here.
 //    [GMSServices provideAPIKey:@"AIzaSyAJ4JHd-lX9B_e-cPjfOCOiH0vSs62UZA4"];
     //XMPPStream
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:2];
+    UIViewController *home = [[UIViewController alloc] init];
+    FriendsController *friends = [[FriendsController alloc] init];
+    UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:home];
+    //CGImageRef *image = [[]]
+    UIImage *image1 = [UIImage imageNamed:@"first"];
+    navController1.tabBarItem.selectedImage = image1;
+    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:friends];
+    friends.superNavController = navController2;
+    //self.navController2 = navController2;
+    UIImage *image2 = [UIImage imageNamed:@"second"];
+    navController2.tabBarItem.image =image2;
+    
+    [array addObject:navController1];
+    [array addObject:navController2];
+    tabBarController.viewControllers = array;
+    tabBarController.selectedIndex = 1  ;
+    tabBarController.tabBar.items[0].image = image1;
+    tabBarController.tabBar.items[1].image = image2;
+
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+   
     self.xmppStream = [[XMPPStream alloc] init];
     [self.xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
 
-
-
-
     return YES;
- 
-
     
 }
 

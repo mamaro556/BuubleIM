@@ -12,11 +12,22 @@
 @implementation FriendsController
 NSMutableArray *FriendsSmpl;
 
+- (id) init {
+    self = [super initWithNibName:nil bundle:nil];
+    return self;
+}
+
 - (void) viewDidLoad {
     [super viewDidLoad];
-//    self.editButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit", nil) style:UIBarButtonItemStylePlain target:self action:@selector(EditClick:)];
+//    self. aQ = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit", nil) style:UIBarButtonItemStylePlain target:self action:@selector(EditClick:)];
     FriendsSmpl = [[NSMutableArray alloc] init];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    // rightBarButtonItem
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target:self action:@selector(addFriend:)];
+    
+    self.navigationItem.rightBarButtonItem  = item;
+
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self appDelegate].ControllerLoaded = @"FriendsController";
     [FriendsSmpl addObject:@"Mark"];
@@ -133,10 +144,30 @@ NSMutableArray *FriendsSmpl;
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
     [self appDelegate].UserMessaged = FriendsSmpl[indexPath.row];
     NSLog(@"%@", [self appDelegate].UserMessaged);
-    [self performSegueWithIdentifier:@"ChatSegue" sender:self];
-//    [self.navigationController pushViewController:FindFriends animated:YES];
+
+  
+    ChatViewController *chatViewController = [[ChatViewController alloc] init];
+    chatViewController.hidesBottomBarWhenPushed = YES;
+ 
+    [self.superNavController  pushViewController:chatViewController animated:YES];
+
 }
 
+-(void) addFriend: (id) sender {
+    FindFriends *findFriendsController = [[FindFriends alloc] init];
+    //findFriendsController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    self.window = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
+    UINavigationController *navController = [[UINavigationController alloc] init];
+
+ //   [self.superNavController  pushViewController:findFriendsController animated:YES];
+    self.window.rootViewController = navController;
+    [self.window makeKeyAndVisible];
+    findFriendsController.modalPresentationStyle = UIModalPresentationPopover;
+    //[self presentModalViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>]
+    [navController  pushViewController:findFriendsController animated:YES];
+
+}
+    
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"Unfriend";
 }

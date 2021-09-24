@@ -42,9 +42,7 @@
 		F17DAD771DF4B73F00A433F1 /* FindFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DAD741DF4B73E00A433F1 /* FindFriends.m */; };
 		F18345101DEE6B1F00A5EA22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F183450F1DEE6B1F00A5EA22 /* main.m */; };
 		F18345131DEE6B2000A5EA22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F18345121DEE6B2000A5EA22 /* AppDelegate.m */; };
-		F183451C1DEE6B2000A5EA22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F183451A1DEE6B2000A5EA22 /* Main.storyboard */; };
 		F183451E1DEE6B2100A5EA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F183451D1DEE6B2100A5EA22 /* Assets.xcassets */; };
-		F18345211DEE6B2100A5EA22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F183451F1DEE6B2100A5EA22 /* LaunchScreen.storyboard */; };
 		F183452C1DEE6B2300A5EA22 /* BahvanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F183452B1DEE6B2300A5EA22 /* BahvanTests.m */; };
 		F18345371DEE6B2300A5EA22 /* BahvanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F18345361DEE6B2300A5EA22 /* BahvanUITests.m */; };
 		F1B1DA4E1E10345400E8E7A3 /* MessageSentDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B1DA4D1E10345300E8E7A3 /* MessageSentDateTableViewCell.m */; };
@@ -139,9 +137,7 @@
 		F183450F1DEE6B1F00A5EA22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F18345111DEE6B2000A5EA22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F18345121DEE6B2000A5EA22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F183451B1DEE6B2000A5EA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F183451D1DEE6B2100A5EA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F18345201DEE6B2100A5EA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F18345221DEE6B2100A5EA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F18345271DEE6B2200A5EA22 /* BahvanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BahvanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F183452B1DEE6B2300A5EA22 /* BahvanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BahvanTests.m; sourceTree = "<group>"; };
@@ -271,9 +267,7 @@
 				F18345121DEE6B2000A5EA22 /* AppDelegate.m */,
 				53367B7722A5FBFF00AB3674 /* FriendsDelegate.h */,
 				531DABDE23CD8C1A0027646F /* FriendsDelegate.m */,
-				F183451A1DEE6B2000A5EA22 /* Main.storyboard */,
 				F183451D1DEE6B2100A5EA22 /* Assets.xcassets */,
-				F183451F1DEE6B2100A5EA22 /* LaunchScreen.storyboard */,
 				F18345221DEE6B2100A5EA22 /* Info.plist */,
 				F183450E1DEE6B1F00A5EA22 /* Supporting Files */,
 				F17DAD6E1DF35D5E00A433F1 /* FriendsController.h */,
@@ -472,9 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F18345211DEE6B2100A5EA22 /* LaunchScreen.storyboard in Resources */,
 				F183451E1DEE6B2100A5EA22 /* Assets.xcassets in Resources */,
-				F183451C1DEE6B2000A5EA22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,25 +631,6 @@
 			targetProxy = F18345331DEE6B2300A5EA22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F183451A1DEE6B2000A5EA22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F183451B1DEE6B2000A5EA22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F183451F1DEE6B2100A5EA22 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F18345201DEE6B2100A5EA22 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		22607254261DC30400560ED5 /* Debug */ = {

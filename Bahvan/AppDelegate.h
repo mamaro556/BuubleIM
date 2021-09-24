@@ -12,6 +12,7 @@
 #import "Account.h"
 #import "FriendsDelegate.h"
 #import "MessageDelegate.h"
+#import "FriendsController.h"
 #import "XMPPRoomMemoryStorage.h"
 //#import "XEP-0136/CoreDataStorage/XMPPMessageArchivingCoreDataStorage.h"
 //#import "XEP-0136/XMPPMessageArchiving.h"
@@ -26,6 +27,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) Account *account;
+@property (nonatomic, retain) UINavigationController *navController2;
 @property (strong, nonatomic) XMPPStream *xmppStream;
 @property (strong, nonatomic) XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;
 @property (strong, nonatomic) XMPPMessageArchiving *xmppMessageArchivingModule;

@@ -10,10 +10,14 @@
 #import <XMPPFramework/XMPPFramework.h>
 #import "AppDelegate.h"
 #import "FriendsDelegate.h"
+#import "ChatViewController.h"
+#import "FindFriends.h"
 //#import "SMChatViewController.h"
 //#import "SMChatDelegate.h"
 
 @interface FriendsController : UITableViewController<XMPPStreamDelegate, FriendsDelegate>
+@property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) UIBarButtonItem *editButton;
 @property (strong, nonatomic) XMPPStream *str;
+@property (nonatomic, retain) UINavigationController *superNavController;
 @end
