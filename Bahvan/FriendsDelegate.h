@@ -13,6 +13,6 @@
 
 
  - (void)FriendsListFound:(NSArray *)FriendsList;
-
+- (void)ReceivedPresence:(NSArray*) FriendPresence;
 
 @end

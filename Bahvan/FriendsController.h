@@ -18,6 +18,7 @@
 @interface FriendsController : UITableViewController<XMPPStreamDelegate, FriendsDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) UIBarButtonItem *editButton;
+@property (nonatomic) NSArray * friendPresence;
 @property (strong, nonatomic) XMPPStream *str;
 @property (nonatomic, retain) UINavigationController *superNavController;
 @end

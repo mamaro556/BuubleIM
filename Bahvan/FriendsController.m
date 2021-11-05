@@ -79,8 +79,26 @@ NSMutableArray *FriendsSmpl;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    cell.imageView.image = [UIImage imageNamed:@"mark1.jpg"];
-    
+    if ([FriendsSmpl containsObject:self.friendPresence[1]]&&[self.friendPresence[0] isEqualToString:@"available"]) {
+        for (int i = 0; i< FriendsSmpl.count; i++) {
+            if ([[FriendsSmpl objectAtIndex:indexPath.row]  isEqualToString:self.friendPresence[1]]) {
+                cell.imageView.image = [UIImage imageNamed:@"greenstatus.png"];
+            }
+            else {
+                cell.imageView.image = [UIImage imageNamed:@"redstatus.png"];
+            }
+        }
+        
+        
+    }
+
+    // resize imageView
+    CGSize itemSize = CGSizeMake(32, 32);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    [cell.imageView.image drawInRect:imageRect];
+    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     //Button
     UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(cell.bounds.origin.x + 210, cell.bounds.origin.y + 10, 100, 30);
@@ -110,15 +128,26 @@ NSMutableArray *FriendsSmpl;
 }
 
 //delegate function
-- (void)FriendsListFound:(NSArray *)FriendsList
-{
-    for (int i=0; i<[FriendsList count]; i++)
-    {
+- (void)FriendsListFound:(NSArray *)FriendsList {
+    for (int i=0; i<[FriendsList count]; i++) {
         [FriendsSmpl addObject:[[FriendsList[i] attributeForName:@"jid"]stringValue]];
         NSLog(@"Friend: %@",[[FriendsList[i] attributeForName:@"jid"]stringValue]);
+        
+        NSXMLElement *presence = [NSXMLElement elementWithName:@"presence"];
+        [presence addAttributeWithName:@"to" stringValue:[[FriendsList[i] attributeForName:@"jid"]stringValue]];
+        [presence addAttributeWithName:@"type" stringValue:@"subscribe"];
+        [[self appDelegate].xmppStream sendElement:presence];
     }
     [self.tableView reloadData];
+}
 
+//delegate function
+- (void) ReceivedPresence: (NSArray *) FriendPresence {
+    
+    self.friendPresence = FriendPresence;
+    NSLog(@"%@", FriendPresence);
+
+    [self.tableView reloadData];
 }
 
 - (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq

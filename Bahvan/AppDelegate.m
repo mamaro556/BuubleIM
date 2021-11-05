@@ -199,8 +199,7 @@
 
     
     XMPPPresence *presence = [XMPPPresence presence];
-    if ([self.ControllerLoaded  isEqual: @"FriendsController"])
-    {
+    if ([self.ControllerLoaded  isEqual: @"FriendsController"]) {
         [self.xmppStream sendElement:presence];
         [self FetchFriends];
     }
@@ -217,9 +216,7 @@
 
 
 
-- (void)FetchFriends
-{
-    
+- (void)FetchFriends {
     NSError *error = [[NSError alloc] init];
     NSXMLElement *query = [[NSXMLElement alloc] initWithXMLString:@"<query xmlns='jabber:iq:roster'/>"error:&error];
     NSXMLElement *iq = [NSXMLElement elementWithName:@"iq"];
@@ -230,11 +227,9 @@
     [self.xmppStream sendElement:iq];
 }
 
-- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq
-{
+- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq {
     NSXMLElement *queryElement = [iq elementForName: @"query" xmlns: @"jabber:iq:roster"];
-    if (queryElement)
-    {
+    if (queryElement) {
         NSLog(@"This is query element: %@", queryElement);
         NSArray *itemElements = [queryElement elementsForName: @"item"];
         [self.FriendsDelegate FriendsListFound:itemElements];
@@ -242,6 +237,18 @@
     return NO;
 }
 
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(nonnull XMPPPresence *)presence {
+    NSString* type;
+    NSString* from;
+    XMPPJID* pf;
+    
+    type = [presence type];
+    from = [[presence from] bare];
+    NSArray* friendPresence;
+    friendPresence = @[type, from];
+    [self.FriendsDelegate ReceivedPresence:friendPresence];
+}
+    
 - (void) xmppStream:(XMPPStream *)sender didReceiveMessage:(nonnull XMPPMessage *)message
 {
     NSLog(@"This is message: %@", message);
