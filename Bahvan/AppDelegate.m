@@ -74,7 +74,7 @@
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     
-//    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+//    BOOL handled = [[FBSDKApplicatioanDelegate sharedInstance] application:application
 //                                                                  openURL:url
 //                                                   sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
 //                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
@@ -86,9 +86,7 @@
 
 
 - (void)setupStream {
-//    [self.xmppStream setHostName:@"34.218.246.53"];
-//    [self.xmppStream setHostPort:5222];
-//    [self.xmppStream setMyJID:[XMPPJID jidWithString:@"user5@34.218.246.53"]];
+
     [self.xmppStream setHostName:@"198.22.162.247"];
     [self.xmppStream setHostPort:5222];
     [self.xmppStream setMyJID:[XMPPJID jidWithString:@"mark@localhost"]];
@@ -96,7 +94,7 @@
 }
 
 
--(void) createRoom{
+-(void) createRoom {
     XMPPRoomMemoryStorage *roomStorage = [[XMPPRoomMemoryStorage alloc] init];
     
     /**
@@ -118,24 +116,20 @@
                            password:nil];
 }
 
-- (void)xmppRoomDidCreate:(XMPPRoom *)sender
-{
+- (void)xmppRoomDidCreate:(XMPPRoom *)sender {
     NSLog(@"Room did create.");
 }
 
-- (void)xmppRoomDidJoin:(XMPPRoom *)sender
-{
+- (void)xmppRoomDidJoin:(XMPPRoom *)sender {
     NSLog(@"Room did join");
     [sender fetchConfigurationForm];
 }
 
-- (void)xmppRoom:(XMPPRoom *)sender didFetchConfigurationForm:(NSXMLElement *)configForm
-{
+- (void)xmppRoom:(XMPPRoom *)sender didFetchConfigurationForm:(NSXMLElement *)configForm {
     NSXMLElement *newConfig = [configForm copy];
     NSArray *fields = [newConfig elementsForName:@"field"];
     
-    for (NSXMLElement *field in fields)
-    {
+    for (NSXMLElement *field in fields) {
         NSString *var = [field attributeStringValueForName:@"var"];
         // Make Room Persistent
         if ([var isEqualToString:@"muc#roomconfig_persistentroom"]) {
@@ -147,31 +141,25 @@
     [sender configureRoomUsingOptions:newConfig];
 }
 
-- (void) connect{
+- (void) connect {
     
     NSError *error = nil;
-    if ([self.xmppStream isConnected])
-    {
+    if ([self.xmppStream isConnected]) {
         
-        if (![self.xmppStream isAuthenticated])
-        {
-            if (![self.xmppStream authenticateWithPassword:@"123" error:&error])
-            {
+        if (![self.xmppStream isAuthenticated]) {
+            if (![self.xmppStream authenticateWithPassword:@"123" error:&error]) {
                 NSLog(@"Error Authenticating");
             }
         }
         NSLog(@"here");
     }
-    else
-    {
+    else {
         [self setupStream];
         
-        if (![self.xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error])
-        {
+        if (![self.xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error]) {
     
             NSLog(@"Error connecting: %@", error);
         }
-        
     }
 }
 
@@ -179,8 +167,7 @@
          
          NSLog(@"connected");
          NSError *error = nil;
-         if (![self.xmppStream authenticateWithPassword:@"123" error:&error])
-         {
+         if (![self.xmppStream authenticateWithPassword:@"123" error:&error]) {
              NSLog(@"Error Authenticating");
          }
          
@@ -206,8 +193,7 @@
 }
 
 
--(void)xmppStream:(XMPPStream *)sender didNotRegister:(NSXMLElement *)error
-{
+-(void)xmppStream:(XMPPStream *)sender didNotRegister:(NSXMLElement *)error {
     DDXMLElement *errorXML = [error elementForName:@"error"];
     NSString *errorCode = [[errorXML attributeForName:@"code"] stringValue];
     
@@ -249,8 +235,7 @@
     [self.FriendsDelegate ReceivedPresence:friendPresence];
 }
     
-- (void) xmppStream:(XMPPStream *)sender didReceiveMessage:(nonnull XMPPMessage *)message
-{
+- (void) xmppStream:(XMPPStream *)sender didReceiveMessage:(nonnull XMPPMessage *)message {
     NSLog(@"This is message: %@", message);
     NSString *msg = [[message elementForName:@"body"]stringValue];
     NSString *from = [[message attributeForName:@"from"]stringValue];
@@ -263,14 +248,12 @@
 }
 
 
-- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error
-{
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error {
     NSLog(@"did not authenticate");
 }
 
 
-- (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error
-{
+- (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error {
     NSLog(@"StreamDidDisconnect");
     NSLog(@"This is error: %@",error);
     NSLog(@"StreamDidDisconnectEnd");
