@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22521DB027826D9100124075 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22521DAF27826D9100124075 /* Settings.plist */; };
+		22521DB127826D9100124075 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22521DAF27826D9100124075 /* Settings.plist */; };
+		22521DB227826D9100124075 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22521DAF27826D9100124075 /* Settings.plist */; };
 		22578F1726501364005256FF /* EcommerceBubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22578F1626501363005256FF /* EcommerceBubbleCell.m */; };
 		225D3EF126EDAB5C0060B03B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */; };
 		225D3EF226EDAB5C0060B03B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */; };
@@ -19,6 +22,12 @@
 		225D3EFB26EDAB950060B03B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF926EDAB950060B03B /* ProductCell.swift */; };
 		225D3EFC26EDAB950060B03B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D3EF926EDAB950060B03B /* ProductCell.swift */; };
 		22607252261DC30400560ED5 /* ACKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2260724B261DC30300560ED5 /* ACKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		228029FF274622990093FB15 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228029FE274622980093FB15 /* LoginView.swift */; };
+		22802A00274622990093FB15 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228029FE274622980093FB15 /* LoginView.swift */; };
+		22802A01274622990093FB15 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228029FE274622980093FB15 /* LoginView.swift */; };
+		22C41D0F2745AE1F00904EE9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C41D0E2745AE1F00904EE9 /* LoginController.swift */; };
+		22C41D102745AE2000904EE9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C41D0E2745AE1F00904EE9 /* LoginController.swift */; };
+		22C41D112745AE2000904EE9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C41D0E2745AE1F00904EE9 /* LoginController.swift */; };
 		531DABDF23CD8C1A0027646F /* FriendsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 531DABDE23CD8C1A0027646F /* FriendsDelegate.m */; };
 		53A9D7E8242D708100C4A249 /* User2.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A9D7E7242D708000C4A249 /* User2.m */; };
 		7AB75122BE31B0CCF00CC1F9 /* Pods_Bahvan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B93D3B6BB1D83DACBA0E1C /* Pods_Bahvan.framework */; };
@@ -102,6 +111,8 @@
 
 /* Begin PBXFileReference section */
 		10B2A852CBD5DC70D7A56100 /* Pods-Bahvan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bahvan.release.xcconfig"; path = "Target Support Files/Pods-Bahvan/Pods-Bahvan.release.xcconfig"; sourceTree = "<group>"; };
+		22521DAE277FEEFE00124075 /* Bahvan-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bahvan-Bridging-Header.h"; sourceTree = "<group>"; };
+		22521DAF27826D9100124075 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		22578F1626501363005256FF /* EcommerceBubbleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcommerceBubbleCell.m; sourceTree = "<group>"; };
 		22578F1826501384005256FF /* EcommerceBubbleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcommerceBubbleCell.h; sourceTree = "<group>"; };
 		225D3EF026EDAB5C0060B03B /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +120,8 @@
 		225D3EF926EDAB950060B03B /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		2260724B261DC30300560ED5 /* ACKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ACKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2260724F261DC30400560ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228029FE274622980093FB15 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		22C41D0E2745AE1F00904EE9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		531DABDE23CD8C1A0027646F /* FriendsDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsDelegate.m; sourceTree = "<group>"; };
 		53367B7722A5FBFF00AB3674 /* FriendsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsDelegate.h; sourceTree = "<group>"; };
 		53A9D7E6242D654300C4A249 /* User2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User2.h; sourceTree = "<group>"; };
@@ -258,6 +271,7 @@
 		F183450D1DEE6B1F00A5EA22 /* Bahvan */ = {
 			isa = PBXGroup;
 			children = (
+				22521DAE277FEEFE00124075 /* Bahvan-Bridging-Header.h */,
 				225D3EF926EDAB950060B03B /* ProductCell.swift */,
 				225D3EF526EDAB820060B03B /* Product.swift */,
 				F10D5D351E036D8400927C0D /* Account.h */,
@@ -265,10 +279,9 @@
 				F107DB931DFF452A00649FD9 /* Models */,
 				F18345111DEE6B2000A5EA22 /* AppDelegate.h */,
 				F18345121DEE6B2000A5EA22 /* AppDelegate.m */,
+				228029FE274622980093FB15 /* LoginView.swift */,
 				53367B7722A5FBFF00AB3674 /* FriendsDelegate.h */,
 				531DABDE23CD8C1A0027646F /* FriendsDelegate.m */,
-				F183451D1DEE6B2100A5EA22 /* Assets.xcassets */,
-				F18345221DEE6B2100A5EA22 /* Info.plist */,
 				F183450E1DEE6B1F00A5EA22 /* Supporting Files */,
 				F17DAD6E1DF35D5E00A433F1 /* FriendsController.h */,
 				F17DAD6F1DF35D5F00A433F1 /* FriendsController.m */,
@@ -292,6 +305,8 @@
 				F11403681EA70B4400CF4B4C /* MessageDelegate.h */,
 				22578F1826501384005256FF /* EcommerceBubbleCell.h */,
 				22578F1626501363005256FF /* EcommerceBubbleCell.m */,
+				22C41D0E2745AE1F00904EE9 /* LoginController.swift */,
+				22521DAF27826D9100124075 /* Settings.plist */,
 			);
 			path = Bahvan;
 			sourceTree = "<group>";
@@ -300,6 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				F183450F1DEE6B1F00A5EA22 /* main.m */,
+				F183451D1DEE6B2100A5EA22 /* Assets.xcassets */,
+				F18345221DEE6B2100A5EA22 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -467,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F183451E1DEE6B2100A5EA22 /* Assets.xcassets in Resources */,
+				22521DB027826D9100124075 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22521DB127826D9100124075 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22521DB227826D9100124075 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,12 +570,14 @@
 				F107DBA41DFF513600649FD9 /* User.m in Sources */,
 				F1E34EA31E09D6A200277068 /* ChatTableViewCell.m in Sources */,
 				531DABDF23CD8C1A0027646F /* FriendsDelegate.m in Sources */,
+				228029FF274622990093FB15 /* LoginView.swift in Sources */,
 				F18345131DEE6B2000A5EA22 /* AppDelegate.m in Sources */,
 				F18345101DEE6B1F00A5EA22 /* main.m in Sources */,
 				F1E34EAD1E0B1F4A00277068 /* MessageBubbleTableViewCell.m in Sources */,
 				F1E34EB21E0B8D4300277068 /* UIImage+ImageWithRed.m in Sources */,
 				F17DAD701DF35D6100A433F1 /* FriendsController.m in Sources */,
 				F107DB9F1DFF4A3600649FD9 /* Chat.m in Sources */,
+				22C41D0F2745AE1F00904EE9 /* LoginController.swift in Sources */,
 				225D3EF126EDAB5C0060B03B /* KeyboardViewController.swift in Sources */,
 				F1B1DA4E1E10345400E8E7A3 /* MessageSentDateTableViewCell.m in Sources */,
 				225D3EFA26EDAB950060B03B /* ProductCell.swift in Sources */,
@@ -577,6 +599,7 @@
 				F107DBA51DFF513600649FD9 /* User.m in Sources */,
 				F160A0DC1E00C6770035108E /* Message.m in Sources */,
 				F1E34EA91E09DB6900277068 /* UserPictureImageView.m in Sources */,
+				22C41D102745AE2000904EE9 /* LoginController.swift in Sources */,
 				F17DAD761DF4B73F00A433F1 /* FindFriends.m in Sources */,
 				F1E34EA41E09D6A200277068 /* ChatTableViewCell.m in Sources */,
 				225D3EFB26EDAB950060B03B /* ProductCell.swift in Sources */,
@@ -587,6 +610,7 @@
 				F107DB911DFF3ADE00649FD9 /* ChatViewController.m in Sources */,
 				F1B1DA4F1E10345500E8E7A3 /* MessageSentDateTableViewCell.m in Sources */,
 				F1E34EAE1E0B1F4B00277068 /* MessageBubbleTableViewCell.m in Sources */,
+				22802A00274622990093FB15 /* LoginView.swift in Sources */,
 				225D3EF726EDAB820060B03B /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +622,7 @@
 				F107DBA61DFF513600649FD9 /* User.m in Sources */,
 				F160A0DD1E00C6770035108E /* Message.m in Sources */,
 				F1E34EAA1E09DB6900277068 /* UserPictureImageView.m in Sources */,
+				22C41D112745AE2000904EE9 /* LoginController.swift in Sources */,
 				F17DAD771DF4B73F00A433F1 /* FindFriends.m in Sources */,
 				F1E34EA51E09D6A200277068 /* ChatTableViewCell.m in Sources */,
 				225D3EFC26EDAB950060B03B /* ProductCell.swift in Sources */,
@@ -608,6 +633,7 @@
 				F107DB921DFF3ADE00649FD9 /* ChatViewController.m in Sources */,
 				F1B1DA501E10345500E8E7A3 /* MessageSentDateTableViewCell.m in Sources */,
 				F1E34EAF1E0B1F4B00277068 /* MessageBubbleTableViewCell.m in Sources */,
+				22802A01274622990093FB15 /* LoginView.swift in Sources */,
 				225D3EF826EDAB820060B03B /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

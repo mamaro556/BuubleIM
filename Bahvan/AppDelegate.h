@@ -27,6 +27,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) Account *account;
+@property (strong, nonatomic) NSString *jidstring;
+@property (strong, nonatomic) NSString *passwordstring;
 @property (nonatomic, retain) UINavigationController *navController2;
 @property (strong, nonatomic) XMPPStream *xmppStream;
 @property (strong, nonatomic) XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;

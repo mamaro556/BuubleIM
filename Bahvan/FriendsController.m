@@ -37,7 +37,7 @@ NSMutableArray *FriendsSmpl;
     [[self appDelegate] connect];
     
     //create room
-    [[self appDelegate] createRoom];
+    //[[self appDelegate] createRoom];
     /*
     self.str = [[XMPPStream alloc]init];
     [self.str addDelegate:self delegateQueue:dispatch_get_main_queue()];

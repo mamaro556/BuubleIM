@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
-
+#import "Bahvan-Swift.h"
 @interface AppDelegate ()
 
 @end
@@ -29,38 +28,31 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch	
-//    [[FBSDKApplicationDelegate sharedInstance] application:application
-//                             didFinishLaunchingWithOptions:launchOptions];
-    // Add any custom logic here.
-//    [GMSServices provideAPIKey:@"AIzaSyAJ4JHd-lX9B_e-cPjfOCOiH0vSs62UZA4"];
-    //XMPPStream
-    
-    
     self.window = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
-    
+
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:2];
+    NSMutableArray *navControllerArray = [[NSMutableArray alloc] initWithCapacity:2];
     UIViewController *home = [[UIViewController alloc] init];
-    FriendsController *friends = [[FriendsController alloc] init];
+    FriendsController *friendsController = [[FriendsController alloc] init];
     UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:home];
-    //CGImageRef *image = [[]]
+   
     UIImage *image1 = [UIImage imageNamed:@"first"];
     navController1.tabBarItem.selectedImage = image1;
-    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:friends];
-    friends.superNavController = navController2;
+    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:friendsController];
+    friendsController.superNavController = navController2;
     //self.navController2 = navController2;
     UIImage *image2 = [UIImage imageNamed:@"second"];
     navController2.tabBarItem.image =image2;
     
-    [array addObject:navController1];
-    [array addObject:navController2];
-    tabBarController.viewControllers = array;
+    [navControllerArray addObject:navController1];
+    [navControllerArray addObject:navController2];
+    tabBarController.viewControllers = navControllerArray;
     tabBarController.selectedIndex = 1  ;
     tabBarController.tabBar.items[0].image = image1;
     tabBarController.tabBar.items[1].image = image2;
 
-    self.window.rootViewController = tabBarController;
+    LoginController *loginController = [[LoginController alloc] init];
+    self.window.rootViewController = loginController;
     [self.window makeKeyAndVisible];
    
     self.xmppStream = [[XMPPStream alloc] init];
@@ -87,10 +79,15 @@
 
 - (void)setupStream {
 
-    [self.xmppStream setHostName:@"198.22.162.247"];
-    [self.xmppStream setHostPort:5222];
-    [self.xmppStream setMyJID:[XMPPJID jidWithString:@"mark@localhost"]];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
+    NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *hostname = settings[@"HostName"];
+    NSString *portstring = settings[@"HostPort"];
+    NSInteger port = [portstring integerValue];
     
+    [self.xmppStream setHostName:hostname];
+    [self.xmppStream setHostPort:port];
+    [self.xmppStream setMyJID:[XMPPJID jidWithString:self.jidstring]];
 }
 
 
@@ -144,7 +141,8 @@
 - (void) connect {
     
     NSError *error = nil;
-    if ([self.xmppStream isConnected]) {
+    //self.jidstring = user;
+    /*if ([self.xmppStream isConnected]) {
         
         if (![self.xmppStream isAuthenticated]) {
             if (![self.xmppStream authenticateWithPassword:@"123" error:&error]) {
@@ -154,20 +152,21 @@
         NSLog(@"here");
     }
     else {
-        [self setupStream];
+    */
+    [self setupStream];
         
-        if (![self.xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error]) {
-    
-            NSLog(@"Error connecting: %@", error);
-        }
+    if (![self.xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error]) {
+
+        NSLog(@"Error connecting: %@", error);
     }
+    
 }
 
 - (void)xmppStreamDidConnect:(XMPPStream *)sender {
          
          NSLog(@"connected");
          NSError *error = nil;
-         if (![self.xmppStream authenticateWithPassword:@"123" error:&error]) {
+         if (![self.xmppStream authenticateWithPassword:self.passwordstring error:&error]) {
              NSLog(@"Error Authenticating");
          }
          
@@ -190,6 +189,33 @@
         [self.xmppStream sendElement:presence];
         [self FetchFriends];
     }
+    
+    self.window = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
+
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    NSMutableArray *navControllerArray = [[NSMutableArray alloc] initWithCapacity:2];
+    UIViewController *home = [[UIViewController alloc] init];
+    FriendsController *friendsController = [[FriendsController alloc] init];
+    UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:home];
+   
+    UIImage *image1 = [UIImage imageNamed:@"first"];
+    navController1.tabBarItem.selectedImage = image1;
+    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:friendsController];
+    friendsController.superNavController = navController2;
+    //self.navController2 = navController2;
+    UIImage *image2 = [UIImage imageNamed:@"second"];
+    navController2.tabBarItem.image =image2;
+    
+    [navControllerArray addObject:navController1];
+    [navControllerArray addObject:navController2];
+    tabBarController.viewControllers = navControllerArray;
+    tabBarController.selectedIndex = 1  ;
+    tabBarController.tabBar.items[0].image = image1;
+    tabBarController.tabBar.items[1].image = image2;
+
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+
 }
 
 
