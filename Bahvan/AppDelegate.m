@@ -177,18 +177,6 @@
 - (void) connect {
     
     NSError *error = nil;
-    //self.jidstring = user;
-    /*if ([self.xmppStream isConnected]) {
-        
-        if (![self.xmppStream isAuthenticated]) {
-            if (![self.xmppStream authenticateWithPassword:@"123" error:&error]) {
-                NSLog(@"Error Authenticating");
-            }
-        }
-        NSLog(@"here");
-    }
-    else {
-    */
     [self setupStream];
         
     if (![self.xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error]) {
@@ -229,11 +217,6 @@
 
     [self.xmppStream sendElement:presence];
     [self FetchFriends];
-    
-}
-
-- (void)LoadControllers {
-    
     
 }
 

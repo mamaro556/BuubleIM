@@ -1,6 +1,6 @@
 //
 //  FriendsController.m
-//  Bahvan
+//  Whatoji
 //
 //  Created by MacOwner on 12/3/16.
 //  Copyright © 2016 Bahvan. All rights reserved.
@@ -37,20 +37,6 @@ NSMutableArray *FriendsSmpl;
     
     //create room
     //[[self appDelegate] createRoom];
-    /*
-    self.str = [[XMPPStream alloc]init];
-    [self.str addDelegate:self delegateQueue:dispatch_get_main_queue()];
-    [self.str setHostName:@"54.70.152.41"];
-    [self.str setHostPort:5222];
-    [self.str setMyJID:[XMPPJID jidWithString:@"mark@bahvan.com"]];
- 
-    
-    NSError *error = nil;
-    if (![self.str connectWithTimeout:XMPPStreamTimeoutNone error:&error])
-    {        
-        NSLog(@"Error connecting: %@", error);
-    }
-*/
 }
 
 - (AppDelegate *) appDelegate {
