@@ -30,11 +30,12 @@ NSMutableArray *FriendsSmpl;
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self appDelegate].ControllerLoaded = @"FriendsController";
-    [FriendsSmpl addObject:@"Mark"];
+    
+    //[FriendsSmpl addObject:@"Mark"];
     //[FriendsSmpl addObject:@"Jennifer"];
-    AppDelegate *app = [self appDelegate];
-    app.FriendsDelegate = self;
-    [[self appDelegate] connect];
+    AppDelegate *del = [self appDelegate];
+    del.FriendsDelegate = self;
+    [del connect];
     
     //create room
     //[[self appDelegate] createRoom];

@@ -10,6 +10,7 @@ import UIKit
 
 @objc class LoginController: UIViewController {
 
+    var window: UIWindow?
     var loginView:LoginView!
     
     override func viewDidLoad() {
@@ -37,8 +38,13 @@ import UIKit
         let app: AppDelegate = appDelegate()
         app.jidstring = loginView.emailTextField.text
         app.passwordstring = loginView.passwordTextField.text
-        app.connect()
+        app.loadHomeControllers()
         print("login button pressed")
+    }
+    
+    func LoadHomeControllers() {
+        
+
     }
     
     func signupPressed() {

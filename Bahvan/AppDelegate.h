@@ -39,6 +39,7 @@
 @property NSString *UserMessaged;
 - (void) connect;
 - (void) createRoom;
+- (void) LoadHomeControllers;
 +(void)initialize;
 @end
 

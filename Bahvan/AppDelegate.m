@@ -28,29 +28,9 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
     self.window = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
-
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    NSMutableArray *navControllerArray = [[NSMutableArray alloc] initWithCapacity:2];
-    UIViewController *home = [[UIViewController alloc] init];
-    FriendsController *friendsController = [[FriendsController alloc] init];
-    UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:home];
-   
-    UIImage *image1 = [UIImage imageNamed:@"first"];
-    navController1.tabBarItem.selectedImage = image1;
-    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:friendsController];
-    friendsController.superNavController = navController2;
-    //self.navController2 = navController2;
-    UIImage *image2 = [UIImage imageNamed:@"second"];
-    navController2.tabBarItem.image =image2;
     
-    [navControllerArray addObject:navController1];
-    [navControllerArray addObject:navController2];
-    tabBarController.viewControllers = navControllerArray;
-    tabBarController.selectedIndex = 1  ;
-    tabBarController.tabBar.items[0].image = image1;
-    tabBarController.tabBar.items[1].image = image2;
-
     LoginController *loginController = [[LoginController alloc] init];
     self.window.rootViewController = loginController;
     [self.window makeKeyAndVisible];
@@ -76,6 +56,62 @@
     return YES;
 }
 
+- (void)LoadHomeControllers {
+
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    NSMutableArray *navControllerArray = [[NSMutableArray alloc] initWithCapacity:2];
+    UIViewController *home = [[UIViewController alloc] init];
+    FriendsController *friendsController = [[FriendsController alloc] init];
+    UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:home];
+   
+    UIImage *image1 = [UIImage imageNamed:@"first"];
+    navController1.tabBarItem.selectedImage = image1;
+    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:friendsController];
+    friendsController.superNavController = navController2;
+    UIImage *image2 = [UIImage imageNamed:@"second"];
+    navController2.tabBarItem.image =image2;
+    
+    [navControllerArray addObject:navController1];
+    [navControllerArray addObject:navController2];
+    tabBarController.viewControllers = navControllerArray;
+    tabBarController.selectedIndex = 1  ;
+    tabBarController.tabBar.items[0].image = image1;
+    tabBarController.tabBar.items[1].image = image2;
+
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+
+/* swift ver
+ let app: AppDelegate = appDelegate()
+
+ window = UIWindow(frame: UIScreen.main.bounds)
+
+ var tabBarController:UITabBarController = UITabBarController()
+ var navControllerArray:NSMutableArray = NSMutableArray(capacity: 2)
+ var home:UIViewController = UIViewController()
+ var friendsController:FriendsController  = FriendsController()
+ var navController1:UINavigationController = UINavigationController(rootViewController: home)
+
+ let image1:UIImage = UIImage(named: "first")!
+ navController1.tabBarItem.selectedImage = image1;
+ var navController2:UINavigationController = UINavigationController(rootViewController: friendsController)
+ friendsController.superNavController = navController2
+ let image2:UIImage = UIImage(named: "second")!
+ navController2.tabBarItem.image = image2;
+ 
+ //navControllerArray.addObjects(from: navController1)
+ //[navControllerArray addObject:navController2];
+ tabBarController.viewControllers = [navController1, navController2]
+ tabBarController.selectedIndex = 1
+ tabBarController.tabBar.items?[0].image = image1;
+ tabBarController.tabBar.items?[1].image = image2;
+ 
+
+ window?.rootViewController = tabBarController
+ app.window?.makeKeyAndVisible()
+ */
+
+}
 
 - (void)setupStream {
 
@@ -171,7 +207,7 @@
          }
          
 }
-     
+    
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
          
     NSLog(@"authenticated");
@@ -183,41 +219,23 @@
     
     self.account = [[Account alloc] init];
 
-    
     XMPPPresence *presence = [XMPPPresence presence];
-    if ([self.ControllerLoaded  isEqual: @"FriendsController"]) {
+
+ /*   if ([self.ControllerLoaded  isEqual: @"FriendsController"]) {
         [self.xmppStream sendElement:presence];
         [self FetchFriends];
     }
+ */
+
+    [self.xmppStream sendElement:presence];
+    [self FetchFriends];
     
-    self.window = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
-
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    NSMutableArray *navControllerArray = [[NSMutableArray alloc] initWithCapacity:2];
-    UIViewController *home = [[UIViewController alloc] init];
-    FriendsController *friendsController = [[FriendsController alloc] init];
-    UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:home];
-   
-    UIImage *image1 = [UIImage imageNamed:@"first"];
-    navController1.tabBarItem.selectedImage = image1;
-    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:friendsController];
-    friendsController.superNavController = navController2;
-    //self.navController2 = navController2;
-    UIImage *image2 = [UIImage imageNamed:@"second"];
-    navController2.tabBarItem.image =image2;
-    
-    [navControllerArray addObject:navController1];
-    [navControllerArray addObject:navController2];
-    tabBarController.viewControllers = navControllerArray;
-    tabBarController.selectedIndex = 1  ;
-    tabBarController.tabBar.items[0].image = image1;
-    tabBarController.tabBar.items[1].image = image2;
-
-    self.window.rootViewController = tabBarController;
-    [self.window makeKeyAndVisible];
-
 }
 
+- (void)LoadControllers {
+    
+    
+}
 
 -(void)xmppStream:(XMPPStream *)sender didNotRegister:(NSXMLElement *)error {
     DDXMLElement *errorXML = [error elementForName:@"error"];
