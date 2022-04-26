@@ -29,11 +29,9 @@ NSMutableArray *FriendsSmpl;
     self.navigationItem.rightBarButtonItem  = item;
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self appDelegate].ControllerLoaded = @"FriendsController";
     
-    //[FriendsSmpl addObject:@"Mark"];
-    //[FriendsSmpl addObject:@"Jennifer"];
     AppDelegate *del = [self appDelegate];
+    del.ControllerLoaded = @"FriendsController";
     del.FriendsDelegate = self;
     [del connect];
     

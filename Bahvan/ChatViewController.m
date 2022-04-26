@@ -267,18 +267,7 @@ Product *products[1];  // array of Product
    // [self.str addDelegate:self delegateQueue:dispatch_get_main_queue()];
     self.xmppRoster = [[XMPPRoster alloc] initWithRosterStorage:self.xmppRosterStorage];
  //   [self.xmppRoster activate:self.str];
-/*
-    [self.str setHostName:@"54.70.152.41"];
-    [self.str setHostPort:5222];
-    [self.str setMyJID:[XMPPJID jidWithString:@"mark@bahvan.com"]];
 
-    NSError *error = nil;
-    if (![self.str connectWithTimeout:XMPPStreamTimeoutNone error:&error])
-    {
-        
-        NSLog(@"Error connecting: %@", error);
-    }
-*/
     [self.ChatView registerClass:MessageSentDateTableViewCell.self forCellReuseIdentifier:@"SentDateCell"];
     [self.view addSubview:self.ChatView];
     self.ChatView.translatesAutoresizingMaskIntoConstraints = NO;

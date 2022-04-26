@@ -41,12 +41,7 @@ import UIKit
         app.loadHomeControllers()
         print("login button pressed")
     }
-    
-    func LoadHomeControllers() {
         
-
-    }
-    
     func signupPressed() {
         print("signup button pressed")
     }
